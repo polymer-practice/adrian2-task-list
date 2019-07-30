@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="adrian2-task-list">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `adrian2-task-list`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class Adrian2TaskList extends Polymer.Element {
+      static get is() { return 'adrian2-task-list'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'adrian2-task-list'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(Adrian2TaskList.is, Adrian2TaskList);
+  </script>
+</dom-module>
