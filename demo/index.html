@@ -22,7 +22,42 @@
       <h3>Basic adrian2-task-list demo</h3>
       <demo-snippet>
         <template>
-          <adrian2-task-list></adrian2-task-list>
+          <adrian2-task-list id="task-list"></adrian2-task-list>
+          <script>
+            const taskListElement = document.getElementById('task-list');
+            taskListElement.taskList = [
+              {
+                id: 0,
+                title: 'Learn Polymer 2',
+                canceled: false,
+                done: false
+              },
+              {
+                id: 1,
+                title: 'Learn AWS',
+                canceled: true,
+                done: false
+              },
+              {
+                id: 2,
+                title: 'Buy a suite case',
+                canceled: false,
+                done: true
+              },
+              {
+                id: 3,
+                title: 'Pay my rent',
+                canceled: true,
+                done: true
+              },
+              {
+                id: 4,
+                title: 'Make my self a respetable man',
+                canceled: false,
+                done: false
+              },
+            ];
+          </script>
         </template>
       </demo-snippet>
     </div>

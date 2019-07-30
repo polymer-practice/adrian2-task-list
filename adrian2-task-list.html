@@ -8,25 +8,26 @@
         display: block;
       }
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <div class="task-list-element">
+      <template is="dom-repeat" items="[[taskList]]">
+        <adrian2-task-element
+        key="[[item.id]]"
+        title="[[item.title]]"
+        cancel="[[item.canceled]]"
+        done="[[item.done]]"
+        ></adrian2-task-element>
+      </template>
+    </div>
   </template>
 
   <script>
-    /**
-     * `adrian2-task-list`
-     * 
-     *
-     * @customElement
-     * @polymer
-     * @demo demo/index.html
-     */
     class Adrian2TaskList extends Polymer.Element {
       static get is() { return 'adrian2-task-list'; }
       static get properties() {
         return {
-          prop1: {
-            type: String,
-            value: 'adrian2-task-list'
+          taskList: {
+            type: Array,
+            value: []
           }
         };
       }
